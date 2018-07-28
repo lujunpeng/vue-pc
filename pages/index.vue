@@ -23,11 +23,26 @@
 </template>
 
 <script>
+import { indexPost } from '@/api/index'
 import AppLogo from '~/components/AppLogo.vue'
 
 export default {
   components: {
     AppLogo
+  },
+  mounted() {
+    this.indexPost()
+  },
+  methods: {
+    indexPost() {
+      const form = {
+        title: 'test',
+        content: 'aaaa'
+      }
+      indexPost(form).then(res => {
+        console.log(res)
+      })
+    }
   }
 }
 </script>
