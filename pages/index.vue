@@ -36,8 +36,9 @@ export default {
   methods: {
     indexPost() {
       const form = {
-        title: 'test',
-        content: 'aaaa'
+        title: 'demo',
+        author: 'lujunpeng',
+        date: '2018-08-01'
       }
       indexPost(form).then(res => {
         console.log(res)
