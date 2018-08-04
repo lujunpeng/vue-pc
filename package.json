@@ -20,6 +20,13 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "mediasoup-client": "^2.1.1",
+    "protoo-client": "^3.0.0",
+    "js-cookie": "^2.2.0",
+    "debug": "^3.1.0",
+    "url-parse": "^1.2.0",
+    "node-random-name": "^1.0.1",
+    "random-string": "^0.2.0",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

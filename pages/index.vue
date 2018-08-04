@@ -25,7 +25,8 @@
 <script>
 import { indexPost } from '@/api/index'
 import AppLogo from '~/components/AppLogo.vue'
-
+import { getDeviceInfo } from 'mediasoup-client'
+import UrlParse from 'url-parse'
 export default {
   components: {
     AppLogo
@@ -36,7 +37,9 @@ export default {
   methods: {
     indexPost() {
       const form = {
-        title: 'demo',
+        delId: 27,
+        // id: 1,
+        title: 'hhhh',
         author: 'lujunpeng',
         date: '2018-08-01'
       }
