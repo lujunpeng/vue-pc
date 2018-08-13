@@ -1,8 +1,18 @@
 import Vue from 'vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 
+import '..\\node_modules\\_normalize.css@7.0.0@normalize.css\\normalize.css'
+
+import '..\\assets\\css\\main.scss'
+
 
 let layouts = {
+
+  "_blog": () => import('..\\layouts\\blog.vue'  /* webpackChunkName: "layouts_blog" */).then(m => m.default || m),
+
+  "_components/Footer": () => import('..\\layouts\\components\\Footer.vue'  /* webpackChunkName: "layouts_components_Footer" */).then(m => m.default || m),
+
+  "_components/Header": () => import('..\\layouts\\components\\Header.vue'  /* webpackChunkName: "layouts_components_Header" */).then(m => m.default || m),
 
   "_default": () => import('..\\layouts\\default.vue'  /* webpackChunkName: "layouts_default" */).then(m => m.default || m)
 
@@ -11,7 +21,7 @@ let layouts = {
 let resolvedLayouts = {}
 
 export default {
-  head: {"title":"vue-demo","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+  head: {"title":"企点通","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"企点通"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')

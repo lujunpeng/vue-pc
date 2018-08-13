@@ -25,8 +25,6 @@
 <script>
 import { indexPost } from '@/api/index'
 import AppLogo from '~/components/AppLogo.vue'
-import { getDeviceInfo } from 'mediasoup-client'
-import UrlParse from 'url-parse'
 export default {
   components: {
     AppLogo
