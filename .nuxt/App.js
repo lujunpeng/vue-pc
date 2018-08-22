@@ -3,6 +3,8 @@ import NuxtLoading from './components/nuxt-loading.vue'
 
 import '..\\node_modules\\_normalize.css@7.0.0@normalize.css\\normalize.css'
 
+import '..\\node_modules\\_vue-back@0.1.3@vue-back\\dist\\vue-back.css'
+
 import '..\\assets\\css\\main.scss'
 
 
