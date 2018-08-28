@@ -1,6 +1,6 @@
 <template>
   <header class="header">
-    <div class="header-logo">
+    <!-- <div class="header-logo">
       <img src="../../assets/images/home/logo.png" />
       <span>企点网</span>
     </div>
@@ -12,7 +12,7 @@
       <a href="javascript:;">下载</a>
       <a href="javascript:;">关于我们</a>
       <a href="javascript:;">登录网页版</a>
-    </nav>
+    </nav> -->
   </header>
 </template>
 
