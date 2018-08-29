@@ -3,7 +3,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: '企点通',
+    title: '在线简历',
     meta: [{
         charset: 'utf-8'
       },
@@ -26,10 +26,9 @@ module.exports = {
   /*
    ** Customize the progress bar color
    */
-  // loading: { 
-  //   color: '#3B8070',
-  //   height: '5px'
-  // },
+  loading: { 
+    color: '#41B883'
+  },
   /*
    ** Build configuration
    */

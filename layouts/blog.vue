@@ -4,6 +4,7 @@
     <div class="head"></div>
     <nuxt/>
     <qd-footer/>
+    <vue-back color="#41B883"></vue-back>
   </div>
 </template>
 

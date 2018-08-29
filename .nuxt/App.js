@@ -3,7 +3,7 @@ import NuxtLoading from './components/nuxt-loading.vue'
 
 import '..\\node_modules\\_normalize.css@7.0.0@normalize.css\\normalize.css'
 
-import '..\\node_modules\\_vue-back@0.1.4@vue-back\\dist\\vue-back.css'
+import '..\\node_modules\\_vue-back@0.1.5@vue-back\\dist\\vue-back.css'
 
 import '..\\assets\\css\\main.scss'
 
@@ -23,7 +23,7 @@ let layouts = {
 let resolvedLayouts = {}
 
 export default {
-  head: {"title":"企点通","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"企点通"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
+  head: {"title":"在线简历","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"企点通"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"style":[],"script":[]},
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
     const layoutEl = h(this.layout || 'nuxt')

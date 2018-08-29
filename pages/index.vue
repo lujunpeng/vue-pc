@@ -19,7 +19,6 @@
           class="button--grey">GitHub</a>
       </div>
     </div>
-    <vue-back/>
   </section>
 </template>
 
