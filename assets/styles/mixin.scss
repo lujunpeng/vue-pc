@@ -1,0 +1,145 @@
+$blue: #12b1f5;
+$red: #fa7171;
+$deepRed: #d43c33;
+$green: #7cbb8f;
+$yellow: #fa9f47;
+$black: #3f3f3f;
+$gray: #9a9a9a;
+$deepGray: #404040;
+$bc: #F7F7F7;
+$grayBorder: #e0e0e0 solid 1px;
+$boxShadow: #d5d5d5 0 0 15px;
+$boxShadowBlue: $blue 0 0 15px;
+$borderRadius: 12px;
+$padding: 20px;
+$modelPadding: 60px;
+$bodyWidthSmall: 1000px;
+$bodyWidthMediume: 1200px;
+$bodyWidthLarge: 1400px;
+$widthSmall: 1280px;
+$widthMedium: 1600px;
+$widthLarge: 1920px;
+$titleSize: 40px;
+$subtitleSize: 20px;
+// 媒体查询 1200 1600 1920
+@mixin responsive($width) {
+  @if $width==wide-screens {
+    @media only screen and (max-width: $widthLarge) {
+      @content;
+    }
+  }
+  @else if $width==medium-screens {
+    @media only screen and (max-width: $widthMedium) {
+      @content;
+    }
+  }
+  @else if $width==small-screens {
+    @media only screen and (max-width: $widthSmall) {
+      @content;
+    }
+  }
+}
+
+// 背景
+@mixin background($url) {
+  height: 700px;
+  background-image: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+// 遮罩
+@mixin mask {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+// 超出显示省略号
+@mixin ovwtext {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 点击效果
+@mixin click($color) {
+  content: ' ';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border: inherit;
+  border-color: $color;
+  background-color: $color;
+  border-radius: inherit;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+// 背景图片地址和大小
+@mixin bis($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+//定位上下左右居中
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+@mixin ct {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位上下居中
+@mixin cl {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+//宽高
+@mixin wh($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//字体大小、行高、字体
+@mixin font($size, $line-height, $family: 'Microsoft YaHei') {
+  font: #{$size}/#{$line-height} $family;
+}
+
+//字体大小，颜色
+@mixin sc($size, $color) {
+  font-size: $size;
+  color: $color;
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between) {
+  display: flex;
+  justify-content: $type;
+}

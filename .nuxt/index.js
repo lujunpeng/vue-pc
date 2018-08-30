@@ -13,6 +13,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 /* Plugins */
 import nuxt_plugin_vueback_9dc6b378 from 'nuxt_plugin_vueback_9dc6b378' // Source: ..\\plugins\\vue-back
+import nuxt_plugin_museui_3b009f11 from 'nuxt_plugin_museui_3b009f11' // Source: ..\\plugins\\muse-ui
 
 
 // Component: <no-ssr>
@@ -135,6 +136,7 @@ async function createApp (ssrContext) {
   // Plugin execution
   
   if (typeof nuxt_plugin_vueback_9dc6b378 === 'function') await nuxt_plugin_vueback_9dc6b378(app.context, inject)
+  if (typeof nuxt_plugin_museui_3b009f11 === 'function') await nuxt_plugin_museui_3b009f11(app.context, inject)
   
 
   // If server-side, wait for async component to be resolved first

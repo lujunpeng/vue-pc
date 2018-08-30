@@ -3,7 +3,7 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-    title: '在线简历',
+    title: '简历魔板',
     meta: [{
         charset: 'utf-8'
       },
@@ -14,7 +14,7 @@ module.exports = {
       {
         hid: 'description',
         name: 'description',
-        content: '企点通'
+        content: '简历魔板'
       }
     ],
     link: [{
@@ -26,13 +26,26 @@ module.exports = {
   /*
    ** Customize the progress bar color
    */
-  loading: { 
-    color: '#41B883'
+  loading: {
+    color: '#41B883',
+    height: '3px'
   },
   /*
    ** Build configuration
    */
   build: {
+    // babel: { //配置按需引入规则
+    //   "plugins": [
+    //     [
+    //       "import",
+    //       {
+    //         "libraryName": "muse-ui",
+    //         "libraryDirectory": "lib",
+    //         "camel2DashComponentName": false
+    //       }
+    //     ]
+    //   ]
+    // },
     /*
      ** Run ESLint on save
      */
@@ -63,12 +76,24 @@ module.exports = {
     'normalize.css', // 样式格式化
     'vue-back/dist/vue-back.css',
     {
-      src: '~assets/css/main.scss',
+      src: '~assets/styles/main.scss',
       lang: 'scss'
-    } // 指定 scss 而非 sass
+    }, // 指定 scss 而非 sass
+    'muse-ui/dist/muse-ui.css'
+    // {
+    //   src: 'muse-ui/lib/styles/base.less',
+    //   lang: 'less'
+    // },
+    // {
+    //   src: 'muse-ui/lib/styles/theme.less',
+    //   lang: 'less'
+    // }
   ],
   plugins: [{
     src: '~/plugins/vue-back',
+    ssr: true
+  }, {
+    src: '~/plugins/muse-ui',
     ssr: true
   }],
 }

@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <qd-header/>
+  <div class="login">
     <div class="head"></div>
     <nuxt/>
     <qd-footer/>
@@ -9,21 +8,23 @@
 </template>
 
 <script>
-import QdHeader from './components/Header'
 import QdFooter from './components/Footer'
 export default {
   name: 'Default',
   components: {
-    QdHeader,
     QdFooter
   }
 }
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-.head {
-  background: #333;
-  height: 80px;
+.login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(45deg, #7A88FF, #7AFFAF);
 }
 </style>
 
